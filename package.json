@@ -6,6 +6,7 @@
     "start": "PORT=3001 react-app-rewired start --watch",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --watchAll=false",
+    "test:watch": "jest --watchAll",
     "eject": "react-scripts eject",
     "commit": "git-cz",
     "storybook": "start-storybook -s ./public -p 6005"
@@ -21,27 +22,6 @@
     "styled-media-query": "2.1.2",
     "zustand": "3.2.0",
     "zustand-persist": "0.3.0"
-  },
-  "jest": {
-    "testEnvironment": "jsdom",
-    "testPathIgnorePatterns": [
-      "/node_modules/"
-    ],
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "src/**/*.ts(x)?",
-      "!src/**/stories.tsx",
-      "!src/index.tsx",
-      "!src/App.tsx",
-      "!src/services/*.ts",
-      "!src/config/reactotron-config.ts",
-      "!src/**/styles.ts",
-      "!src/styles/global.ts",
-      "!src/routes/*.tsx"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/.jest/setup.ts"
-    ]
   },
   "husky": {
     "hooks": {
@@ -101,6 +81,8 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^4.0.0",
     "husky": "^4.2.3",
+    "babel-jest": "^24.9.0",
+    "jest-dom": "^4.0.0",
     "jest-styled-components": "7.0.3",
     "lint-staged": "^10.2.6",
     "prettier": "^2.0.1",
